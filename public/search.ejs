@@ -5,6 +5,10 @@
 <link href="https://cdn.glitch.global/c77d4b26-2cc8-4635-b482-5ece7e2346b4/search.png?v=1653156590370" rel=icon>
 <meta property="twitter:description" content="<%=search%> at PokeSearch" />   
 <style>
+     body{
+    background-color:#000;
+  }
+  
   .form-control{
     display: block;
     width: 85%;
@@ -27,6 +31,11 @@
   outline: 0;
   box-shadow: 0 0 0 0.25rem #dc354580;
 }
+  h1,p{
+    color:white;
+  }
+  a:link { text-decoration: none; }
+  a:hover { text-decoration:underline;}
 </style>
 <title><%= title %> - <%=search%></title>
 </head>
@@ -41,19 +50,20 @@
       <button type="submit" class="btn btn-danger">Search privately</button>
       </div>
       </form>
-        <hr>
+      <hr style="color:white">
       </form>
       <% results.forEach(x => { %>
-        <a href="<%= x.link %>" class="text-danger"><%= x.title %></a><br>
-        <p class="text-success"><%= x.link %><br>
-        <%= x.snippet.toString() %>
+        <a href="<%= x.link %>"><%= x.title %></a><br>
+        <p style="color:gray;"><%= x.link %><br>
+         <span style="color:white"><%= x.snippet.toString() %></span>
           </p>
              <% }) %>
     </div>
   </div>
-</div><hr>
+</div>      <hr style="color:white">
+
        <p>
-        <center>we dont track you,others do</center>
+        <center><p>we dont track you,others do</p></center>
       </p>
           </body>
   </html>
