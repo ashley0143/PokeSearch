@@ -52,8 +52,8 @@
       </form>
       <hr style="color:white">
       </form>
-      <% results.forEach(x => { %>
-        <a href="<%= x.link %>"><%= x.title %></a><br>
+       <% results.forEach(x => { %>
+        <a href="/links?url=<%= x.link %>"><%= x.title %></a><br>
         <p style="color:gray;"><%= x.link %><br>
          <span style="color:white"><%= x.snippet.toString() %></span>
           </p>
@@ -61,7 +61,6 @@
     </div>
   </div>
 </div>      <hr style="color:white">
-
        <p>
         <center><p>we dont track you,others do</p></center>
       </p>
