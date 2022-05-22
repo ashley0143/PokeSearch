@@ -13,11 +13,15 @@ app.get("/", (req, res) => {
 
 app.get("/search", (req, res) => {
   search({'query': `${req.query.query}`}).then(results => {
-  console.log(results)
   res.render(process.cwd() + "/public/search.ejs", { results: results,title: AppTitle,search: req.query.query  })
     }).catch(e => {
   console.log(e)
 })
+})
+
+app.get("/links", (req, res) => {
+  const url = req.query.url
+  res.redirect(req.query.url + "?utm=pokesearch")
 })
 
 app.listen(3000, () => {
